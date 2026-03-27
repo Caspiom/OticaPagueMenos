@@ -40,7 +40,7 @@ const testimonials = [
     name: 'Lucas Ferreira',
     role: 'Cliente verificado',
     rating: 5,
-    text: 'Melhor ótica do Shopping Piedade sem dúvidas. Preços competitivos, variedade de marcas e atendimento humano e diferenciado. Minha família toda compra aqui!',
+    text: 'Melhor ótica de Salvador sem dúvidas. Preços competitivos, variedade de marcas e atendimento humano e diferenciado. Minha família toda compra aqui!',
     avatar: 'L',
   },
 ]

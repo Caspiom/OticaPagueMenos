@@ -39,7 +39,7 @@ export default function Hero() {
                 ))}
               </div>
               <span className="text-brand-yellow text-xs font-semibold tracking-wide">
-                Melhor Ótica do Shopping Piedade
+                Melhor Ótica de Salvador
               </span>
             </div>
 
