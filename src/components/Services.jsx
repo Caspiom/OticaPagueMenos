@@ -39,9 +39,9 @@ const services = [
         <path strokeLinecap="round" strokeLinejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09z" />
       </svg>
     ),
-    title: 'Marcas Premium',
+    title: 'Qualidade, Agilidade e Preço Justo',
     description:
-      'Mais de 50 marcas nacionais e internacionais: Ray-Ban, Oakley, Vogue, Prada, Versace e muito mais para você escolher.',
+      'Qualidade na montagem, agilidade na entrega e preço justo. Na Ótica Pague Menos, você sai enxergando melhor — sem esperar.',
     highlight: false,
   },
   {

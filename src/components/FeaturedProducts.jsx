@@ -105,8 +105,7 @@ export default function FeaturedProducts() {
                   <p className="text-white/45 text-xs mt-1">{product.description}</p>
                 </div>
 
-                <div className="flex items-center justify-between pt-2 border-t border-white/5">
-                  <span className="text-brand-yellow font-bold text-sm">{product.price}</span>
+                <div className="flex items-center justify-end pt-2 border-t border-white/5">
                   <a
                     href={makeWhatsAppLink(product)}
                     target="_blank"

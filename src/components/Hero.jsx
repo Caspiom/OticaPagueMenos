@@ -114,7 +114,7 @@ export default function Hero() {
             <div className="absolute bottom-4 right-4 lg:bottom-8 lg:right-8 bg-brand-gray/90 backdrop-blur-sm border border-brand-yellow/20 rounded-2xl px-4 py-3 text-left">
               <p className="text-brand-yellow text-xs font-semibold">Novo Lançamento</p>
               <p className="text-white text-sm font-bold mt-0.5">Cat Eye Elegance</p>
-              <p className="text-white/50 text-xs">A partir de R$ 249,90</p>
+              <p className="text-white/50 text-xs">Consulte condições</p>
             </div>
           </div>
         </div>
