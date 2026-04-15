@@ -5,6 +5,7 @@ import FeaturedProducts from './components/FeaturedProducts'
 import Services from './components/Services'
 import About from './components/About'
 import Testimonials from './components/Testimonials'
+import ContactCTA from './components/ContactCTA'
 import Location from './components/Location'
 import FloatingWhatsApp from './components/FloatingWhatsApp'
 import Footer from './components/Footer'
@@ -22,6 +23,7 @@ export default function App() {
         <Services />
         <About />
         <Testimonials />
+        <ContactCTA />
         <Location />
       </main>
       <Footer />
