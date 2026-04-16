@@ -162,7 +162,17 @@ export default function Footer() {
       <div className="border-t border-white/5 py-6">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row justify-between items-center gap-2 text-white/30 text-xs">
           <p>© {year} Ótica Pague Menos. Todos os direitos reservados.</p>
-          <p>Desenvolvido com ♥ em Salvador, Bahia.</p>
+          <p>
+            Precisa de um site profissional para o seu negócio?{' '}
+            <a
+              href="https://lucasgasparidev.vercel.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white/40 hover:text-white/60 transition-colors underline underline-offset-2"
+            >
+              Fale com a Gaspari Dev
+            </a>
+          </p>
         </div>
       </div>
     </footer>
