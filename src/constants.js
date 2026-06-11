@@ -26,7 +26,7 @@ export const BRANDS = [
   'Tommy Hilfiger', 'Pierre Cardin', 'Polaroid', 'Carrera',
 ]
 
-export const FEATURED_PRODUCTS = [1, 2, 3, 4, 5]
+export const FEATURED_PRODUCTS = [1, 2, 3, 4]
 
 export const PRODUCTS = [
   // — Destaques originais —

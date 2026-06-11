@@ -95,15 +95,38 @@ export default function FeaturedProducts() {
           ))}
         </div>
 
-        {/* CTA */}
-        <div className="text-center mt-14">
-          <p className="text-white/45 text-sm mb-4">
-            Quer ver todos os modelos? Acesse nosso catálogo completo!
-          </p>
-          <Link to="/catalogo" className="btn-outline inline-flex items-center gap-2">
-            <Eye size={16} />
-            Ver Catálogo Completo
-          </Link>
+        {/* CTA Banner */}
+        <div className="mt-14 relative rounded-3xl overflow-hidden">
+          {/* Background */}
+          <div className="absolute inset-0 bg-brand-gray" />
+          <div
+            className="absolute inset-0"
+            style={{ background: 'radial-gradient(ellipse 70% 100% at 100% 50%, rgba(245,200,0,0.12) 0%, transparent 65%)' }}
+          />
+          {/* Decorative circles */}
+          <div className="absolute right-8 top-1/2 -translate-y-1/2 w-48 h-48 rounded-full border border-brand-yellow/10 pointer-events-none" />
+          <div className="absolute right-16 top-1/2 -translate-y-1/2 w-28 h-28 rounded-full border border-brand-yellow/10 pointer-events-none" />
+
+          <div className="relative flex flex-col sm:flex-row items-center justify-between gap-6 px-8 py-10">
+            <div>
+              <p className="text-brand-yellow text-xs font-bold tracking-[0.25em] uppercase mb-2">
+                + de {Math.floor(PRODUCTS.length / 10) * 10} modelos
+              </p>
+              <h3 className="text-white font-display text-2xl md:text-3xl font-bold leading-snug">
+                Explore o catálogo completo
+              </h3>
+              <p className="text-white/40 text-sm mt-1.5">
+                Feminino, masculino e infantil — tudo em um só lugar.
+              </p>
+            </div>
+            <Link
+              to="/catalogo"
+              className="flex-shrink-0 bg-brand-yellow text-brand-black font-bold px-8 py-4 rounded-full hover:bg-yellow-400 transition-all duration-300 hover:scale-105 active:scale-95 inline-flex items-center gap-2.5 text-sm tracking-wide shadow-lg shadow-brand-yellow/20 whitespace-nowrap"
+            >
+              <Eye size={17} />
+              Ver Catálogo Completo
+            </Link>
+          </div>
         </div>
       </div>
     </section>
