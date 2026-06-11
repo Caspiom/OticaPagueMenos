@@ -1,18 +1,20 @@
 import { useState, useEffect } from 'react'
+import { Link, useLocation } from 'react-router-dom'
 import { Menu, X, MessageCircle } from 'lucide-react'
 import { WHATSAPP_LINK } from '../constants'
 
 const navLinks = [
-  { label: 'Início', href: '#inicio' },
-  { label: 'Produtos', href: '#produtos' },
-  { label: 'Serviços', href: '#servicos' },
-  { label: 'Sobre Nós', href: '#sobre' },
-  { label: 'Localização', href: '#localizacao' },
+  { label: 'Início', href: '/#inicio' },
+  { label: 'Serviços', href: '/#servicos' },
+  { label: 'Sobre Nós', href: '/#sobre' },
+  { label: 'Localização', href: '/#localizacao' },
 ]
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false)
   const [mobileOpen, setMobileOpen] = useState(false)
+  const { pathname } = useLocation()
+  const isCatalog = pathname === '/catalogo'
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 60)
@@ -25,7 +27,7 @@ export default function Navbar() {
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-        scrolled
+        scrolled || isCatalog
           ? 'bg-brand-black/95 backdrop-blur-md shadow-lg shadow-black/40 border-b border-white/5'
           : 'bg-transparent'
       }`}
@@ -33,13 +35,13 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <a href="#inicio" className="flex-shrink-0">
+          <Link to="/" className="flex-shrink-0">
             <img
               src="/imagens/logo-pague-menos.png"
               alt="Ótica Pague Menos"
               className="h-10 w-auto brightness-0 invert"
             />
-          </a>
+          </Link>
 
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center gap-8">
@@ -53,6 +55,19 @@ export default function Navbar() {
                 <span className="absolute -bottom-1 left-0 w-0 h-px bg-brand-yellow transition-all duration-300 group-hover:w-full" />
               </a>
             ))}
+            <Link
+              to="/catalogo"
+              className={`text-sm font-medium tracking-wide relative group transition-colors duration-200 ${
+                isCatalog ? 'text-brand-yellow' : 'text-white/70 hover:text-brand-yellow'
+              }`}
+            >
+              Catálogo
+              <span
+                className={`absolute -bottom-1 left-0 h-px bg-brand-yellow transition-all duration-300 ${
+                  isCatalog ? 'w-full' : 'w-0 group-hover:w-full'
+                }`}
+              />
+            </Link>
           </nav>
 
           {/* Desktop CTA */}
@@ -96,6 +111,15 @@ export default function Navbar() {
               {link.label}
             </a>
           ))}
+          <Link
+            to="/catalogo"
+            onClick={handleLinkClick}
+            className={`block py-3 text-base font-medium border-b border-white/5 transition-colors ${
+              isCatalog ? 'text-brand-yellow' : 'text-white/75 hover:text-brand-yellow'
+            }`}
+          >
+            Catálogo
+          </Link>
           <div className="pt-4">
             <a
               href={WHATSAPP_LINK}

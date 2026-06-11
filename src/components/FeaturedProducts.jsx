@@ -1,8 +1,6 @@
-import { useState } from 'react'
+import { Link } from 'react-router-dom'
 import { MessageCircle, Eye } from 'lucide-react'
-import { PRODUCTS, WHATSAPP_NUMBER } from '../constants'
-
-const categories = ['Todos', 'Feminino', 'Masculino', 'Unissex']
+import { PRODUCTS, FEATURED_PRODUCTS, WHATSAPP_NUMBER } from '../constants'
 
 const tagColors = {
   'brand-yellow': 'bg-brand-yellow text-brand-black',
@@ -10,14 +8,9 @@ const tagColors = {
   'red-500': 'bg-red-500 text-white',
 }
 
+const featured = PRODUCTS.filter((p) => FEATURED_PRODUCTS.includes(p.id))
+
 export default function FeaturedProducts() {
-  const [activeCategory, setActiveCategory] = useState('Todos')
-
-  const filtered =
-    activeCategory === 'Todos'
-      ? PRODUCTS
-      : PRODUCTS.filter((p) => p.category === activeCategory)
-
   const makeWhatsAppLink = (product) => {
     const msg = `Olá! Vi no site e tenho interesse na armação "${product.name}". Pode me dar mais informações?`
     return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(msg)}`
@@ -36,26 +29,9 @@ export default function FeaturedProducts() {
           </p>
         </div>
 
-        {/* Category Filter */}
-        <div className="flex justify-center gap-3 mb-12 flex-wrap">
-          {categories.map((cat) => (
-            <button
-              key={cat}
-              onClick={() => setActiveCategory(cat)}
-              className={`px-6 py-2.5 rounded-full text-sm font-semibold transition-all duration-200 ${
-                activeCategory === cat
-                  ? 'bg-brand-yellow text-brand-black'
-                  : 'border border-white/20 text-white/60 hover:border-brand-yellow/50 hover:text-white'
-              }`}
-            >
-              {cat}
-            </button>
-          ))}
-        </div>
-
         {/* Products Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-          {filtered.map((product) => (
+          {featured.map((product) => (
             <div
               key={product.id}
               className="group relative bg-brand-gray rounded-2xl overflow-hidden border border-white/5 hover:border-brand-yellow/30 card-hover"
@@ -68,7 +44,6 @@ export default function FeaturedProducts() {
                   className="w-full h-full object-contain p-4 transition-transform duration-500 group-hover:scale-105"
                 />
 
-                {/* Tag */}
                 {product.tag && (
                   <span
                     className={`absolute top-3 left-3 text-xs font-bold px-2.5 py-1 rounded-full ${
@@ -79,7 +54,6 @@ export default function FeaturedProducts() {
                   </span>
                 )}
 
-                {/* Hover overlay */}
                 <div className="absolute inset-0 bg-brand-black/70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                   <a
                     href={makeWhatsAppLink(product)}
@@ -124,17 +98,12 @@ export default function FeaturedProducts() {
         {/* CTA */}
         <div className="text-center mt-14">
           <p className="text-white/45 text-sm mb-4">
-            Não encontrou o que procura? Temos muito mais na loja!
+            Quer ver todos os modelos? Acesse nosso catálogo completo!
           </p>
-          <a
-            href={`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent('Olá! Gostaria de saber mais sobre o catálogo completo da Ótica Pague Menos.')}`}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn-outline"
-          >
-            <MessageCircle size={16} />
+          <Link to="/catalogo" className="btn-outline inline-flex items-center gap-2">
+            <Eye size={16} />
             Ver Catálogo Completo
-          </a>
+          </Link>
         </div>
       </div>
     </section>
