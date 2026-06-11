@@ -64,7 +64,7 @@ export default function CatalogPage() {
                 Catálogo de <span className="gradient-text">Armações</span>
               </h1>
               <p className="text-white/45 text-base max-w-md leading-relaxed">
-                Explore toda a nossa linha — femininas, masculinas e infantis.
+                Explore toda a nossa linha: femininas, masculinas e infantis.
                 Encontrou algo? Consulte direto pelo WhatsApp.
               </p>
             </div>

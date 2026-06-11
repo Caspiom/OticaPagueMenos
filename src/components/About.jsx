@@ -65,7 +65,7 @@ export default function About() {
               </p>
               <p>
                 Com 26 anos de história no Shopping Piedade, já ajudamos mais de 20 mil clientes
-                a enxergar melhor — e com o melhor preço. Trabalhamos com marcas selecionadas,
+                a enxergar melhor, com o melhor preço. Trabalhamos com marcas selecionadas,
                 exame gratuito e parcelamento facilitado para que o cuidado com a sua visão
                 caiba sempre no seu bolso.
               </p>

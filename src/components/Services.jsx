@@ -41,7 +41,7 @@ const services = [
     ),
     title: 'Qualidade, Agilidade e Preço Justo',
     description:
-      'Qualidade na montagem, agilidade na entrega e preço justo. Na Ótica Pague Menos, você sai enxergando melhor — sem esperar.',
+      'Qualidade na montagem, agilidade na entrega e preço justo. Na Ótica Pague Menos, você sai enxergando melhor, sem esperar.',
     highlight: false,
   },
   {

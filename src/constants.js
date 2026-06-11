@@ -9,7 +9,7 @@ export const STORE_INFO = {
   // ⚠️ Substitua pelas informações reais
   address: 'Shopping Piedade, Loja 45',
   street: 'Rua Junqueira Ayres, 165',
-  neighborhood: 'Piedade, Salvador — BA',
+  neighborhood: 'Piedade, Salvador, BA',
   cep: 'CEP: 40415-000',
   phone: '(71) 9 9686-0176',
   email: 'contato@oticapaguemenos.com.br',

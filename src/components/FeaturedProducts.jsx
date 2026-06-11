@@ -116,7 +116,7 @@ export default function FeaturedProducts() {
                 Explore o catálogo completo
               </h3>
               <p className="text-white/40 text-sm mt-1.5">
-                Feminino, masculino e infantil — tudo em um só lugar.
+                Feminino, masculino e infantil, tudo em um só lugar.
               </p>
             </div>
             <Link
